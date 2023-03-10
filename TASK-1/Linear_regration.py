@@ -1,10 +1,10 @@
-
+# %%
 import pandas as pd
 import numpy as np  
 import matplotlib.pyplot as plt  
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
-from sklearn import matrics
+from sklearn.metrics import mean_absolute_error
 
 url="http://bit.ly/w-data"
 data=pd.read_csv(url)
@@ -42,7 +42,7 @@ print("No of hours={}".format(hours))
 print("predicted percentage={}".format(own_precent[0]))
 
 #Evaluating the model
-print("Mean absolute error:", matrics.mean_absolute_error(y_test,y_pre))
+print("Mean absolute error:",mean_absolute_error(y_test,y_pre))
 
 
 
@@ -51,3 +51,5 @@ print("Mean absolute error:", matrics.mean_absolute_error(y_test,y_pre))
 
 
 
+
+# %%
